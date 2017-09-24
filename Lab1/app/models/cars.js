@@ -3,8 +3,8 @@ var mongoose = require('mongoose'),
 
 var CarSchema = new Schema({
   manufacturer	: String,
-  model			: String,
-  color			: String
+  model			    : String,
+  color			    : String
 });
 
 mongoose.model('Car', CarSchema);
