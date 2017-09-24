@@ -1,18 +1,11 @@
-// Example model
-
 var mongoose = require('mongoose'),
-  Schema = mongoose.Schema;
+    Schema = mongoose.Schema;
 
-var ArticleSchema = new Schema({
-  title: String,
-  url: String,
-  text: String
+var CarSchema = new Schema({
+  manufacturer	: String,
+  model			: String,
+  color			: String
 });
 
-ArticleSchema.virtual('date')
-  .get(function(){
-    return this._id.getTimestamp();
-  });
-
-mongoose.model('Article', ArticleSchema);
+mongoose.model('Car', CarSchema);
 
