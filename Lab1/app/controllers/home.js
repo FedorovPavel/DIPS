@@ -1,18 +1,21 @@
-var express = require('express'),
-  router = express.Router(),
-  mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+var express 	= require('express'),
+	router 		= express.Router(),
+	mongoose 	= require('mongoose'),
+	Cars 		= mongoose.model('Article');
 
 module.exports = function (app) {
-  app.use('/', router);
+	app.use('/', router);
 };
 
 router.get('/', function (req, res, next) {
-  Article.find(function (err, articles) {
-    if (err) return next(err);
-    res.render('index', {
-      title: 'Generator-Express MVC',
-      articles: articles
-    });
-  });
+	Cars.find(function (err, cars) {
+		if (err) 
+			return next(err);
+		else {
+			res.render('index', {
+				title	: 'Cars',
+				cars	: cars
+			});
+		}
+	});
 });
