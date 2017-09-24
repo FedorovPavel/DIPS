@@ -1,12 +1,11 @@
-var express = require('express');
-var glob = require('glob');
-
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var compress = require('compression');
-var methodOverride = require('method-override');
+var express 		= require('express'),
+	glob 			= require('glob'),
+	favicon 		= require('serve-favicon'),
+	logger 			= require('morgan'),
+	cookieParser 	= require('cookie-parser'),
+	bodyParser 		= require('body-parser'),
+	compress 		= require('compression'),
+	methodOverride 	= require('method-override');
 
 module.exports = function(app, config) {
   var env = process.env.NODE_ENV || 'development';
@@ -17,7 +16,8 @@ module.exports = function(app, config) {
   app.set('view engine', 'jade');
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
-  app.use(logger('dev'));
+  if(env !==  'test')
+  	app.use(logger('dev'));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({
     extended: true
