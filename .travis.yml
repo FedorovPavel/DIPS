@@ -7,11 +7,11 @@ install:
   - npm install -g mocha
 
 env:
-  - Test_dir=./test/controllers
-  - Test_dir=./test/models
-  - Test_dir=./test/views
+  - Test_dir=./Lab1/test/controllers
+  - Test_dir=./Lab1/test/models
+  - Test_dir=./Lab1/test/views
 
-script: ls && cd $Test_dir && mocha *.js
+script:  cd $Test_dir && mocha *.js
 
 deploy:
   provider: heroku
