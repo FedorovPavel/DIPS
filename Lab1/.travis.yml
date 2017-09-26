@@ -15,7 +15,7 @@ env:
   # - Test_dir=./Lab1/test/views
 
 script:  cd $Test_dir && mocha *.js
-
+ 
 deploy:
   provider: heroku
   app : disptest
