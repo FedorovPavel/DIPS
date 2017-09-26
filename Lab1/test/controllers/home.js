@@ -13,7 +13,7 @@ chai.use(chaiHttp);
 
 describe('home controller', function(){
 
-    //  Clear DataBase 
+    //  Clear DataBase
     beforeEach(function(done){
         Cars.remove({},function(err){
             done();
