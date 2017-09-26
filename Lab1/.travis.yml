@@ -4,6 +4,7 @@ node_js:
 
 before_install:
   - cd ./Lab1/
+  - travis lint
 
 install:
   - npm install
