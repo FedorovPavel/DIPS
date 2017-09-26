@@ -9,7 +9,7 @@ var config = {
       name: 'lab1'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/lab1-development'
+    db: 'mongodb://admin:1111@ds149954.mlab.com:49954/car'
   },
 
   test: {
@@ -18,7 +18,7 @@ var config = {
       name: 'lab1'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/lab1-test'
+    db: 'mongodb://admin:1111@ds149954.mlab.com:49954/car'
   },
 
   production: {
@@ -27,7 +27,7 @@ var config = {
       name: 'lab1'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/lab1-production'
+    db: 'mongodb://admin:1111@ds149954.mlab.com:49954/car'
   }
 };
 
