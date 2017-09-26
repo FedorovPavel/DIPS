@@ -11,7 +11,7 @@ env:
   - Test_dir=./test/models
   - Test_dir=./test/views
 
-script: cd $Test_dir && mocha *.js
+script: ls && cd $Test_dir && mocha *.js
 
 deploy:
   provider: heroku
