@@ -40,12 +40,10 @@ router.post('/car', function(req, res, next) {
 		model 			: n_model,
 		color	  		: n_color
 	});
-	console.log(new_car);
 	new_car.save(function(err, result){ 
 		if (err)
 			return next(err);
 		else {
-			console.log(result);
 			res.status(200).send(result);
 		}
 	});
