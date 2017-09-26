@@ -16,6 +16,8 @@ env:
 
 script:  cd $Test_dir && mocha *.js
 
+before_deploy:
+  - cd ..
 deploy:
   provider: heroku
   app : disptest
